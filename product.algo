@@ -1,0 +1,31 @@
+function sumOfDistinctElements(set1, set2):
+    distinct_elements = []
+    for element1 in set1:
+        if element1 not in distinct_elements:
+            distinct_elements.append(element1)
+    for element2 in set2:
+        if element2 not in distinct_elements:
+            distinct_elements.append(element2)
+    return sum(distinct_elements)
+
+
+procedure dot_product(v1, v2, ps):
+    ps = 0
+    for i in range(len(v1)):
+        ps += v1[i] * v2[i]
+    return ps
+
+
+function dot_product(v1, v2):
+    ps = 0
+    for i in range(len(v1)):
+        ps += v1[i] * v2[i]
+    return ps
+
+
+function is_orthogonal(v1, v2):
+    dot_prod = dot_product(v1, v2)
+    if dot_prod == 0:
+        return True
+    else:
+        return False
